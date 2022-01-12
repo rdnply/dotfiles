@@ -71,3 +71,11 @@ let g:gruvbox_material_background = 'soft'
 colorscheme gruvbox-material
 
 hi! link Search Visual
+
+"=====================================================
+"===================== MAPPINGS ======================
+let mapleader = ","
+
+"===================== C relative instructions ======================
+autocmd FileType c nmap <Leader>b :<C-U>!gcc %:r.c -o %:r.o<CR>
+autocmd FileType c nmap <Leader>r :<C-U>!./%:r.o<CR>
